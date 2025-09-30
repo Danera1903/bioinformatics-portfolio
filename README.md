@@ -18,8 +18,6 @@ Automação de alinhamentos locais com makeblastdb e blastn, incluindo exemplos 
 Workflow para pré-processamento de dados RNA-seq: limpeza, alinhamento e contagem de reads.
 → projects/rna-seq
 
-(novos projetos serão adicionados continuamente)
-
 🛠️ Tecnologias e Ferramentas
 Linguagens: Python, R, Bash
 Bioinformática: NCBI BLAST+, Biopython, DESeq2, Nextflow/Snakemake
