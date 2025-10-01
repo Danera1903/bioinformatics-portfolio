@@ -1,5 +1,5 @@
 ## Sobre Mim
-Sou Daniel Bueno, Biomédico com foco em genômica computacional, ciência de dados e tecnologias aplicadas à biologia. Este portfólio reúne exemplos de análises, pipelines e scripts que desenvolvi para explorar e interpretar dados biológicos. Sinta-se à vontade para explorar, contribuir ou entrar em contato comigo! 🚀
+Sou Daniel Assumpção Bueno, Biomédico com foco em genômica computacional, ciência de dados e tecnologias aplicadas à biologia. Este portfólio reúne exemplos de análises, pipelines e scripts que desenvolvi para explorar e interpretar dados biológicos. Sinta-se à vontade para explorar, contribuir ou entrar em contato comigo! 🚀
 
 ## 🚀 Projetos
 
