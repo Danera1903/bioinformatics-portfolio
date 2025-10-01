@@ -3,8 +3,8 @@ Sou Daniel Assumpção Bueno, Biomédico com foco em genômica computacional, ci
 
 ## 🚀 Projetos
 
-| Projeto           | Descrição                              | Link                                                                 |
-|--------------------|----------------------------------------|----------------------------------------------------------------------|
+| Projeto           | Descrição                              |
+|--------------------|----------------------------------------|
 | 📂 FASTA Analysis | Scripts em Python para manipulação de arquivos FASTA: contagem de nucleotídeos, cálculo de GC content, estatísticas de sequência e visualização de histogramas.
 | 🔎 BLAST Pipeline | Automação de alinhamentos locais com `makeblastdb` e `blastn`, incluindo exemplos práticos de uso.
 | 🧬 RNA-seq Preprocessing | Workflow para pré-processamento de dados RNA-seq: limpeza com Trimmomatic, alinhamento com STAR e contagem de reads.
