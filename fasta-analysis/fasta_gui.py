@@ -17,21 +17,13 @@ def select_file():
         entry.delete(0, tk.END)
         entry.insert(0, file_path)
 
-def export_to_json():
-    if os.path.exists("output/results.csv"):
-        df = pd.read_csv("output/results.csv")
-        json_path = os.path.join("output", "results.json")
-        df.to_json(json_path, orient='records')
-        messagebox.showinfo("Sucesso", f"Resultados exportados para {json_path}")
-    else:
-        messagebox.showerror("Erro", "Nenhum resultado CSV encontrado para exportar!")
-
 def run_analysis():
     input_file = entry.get()
     if not input_file:
         messagebox.showerror("Erro", "Selecione um arquivo FASTA!")
         return
-    output_dir = os.path.join(os.path.dirname(__file__), "output")
+    base_dir = os.path.dirname(sys.executable) if getattr(sys, 'frozen', False) else os.path.dirname(__file__)
+    output_dir = os.path.join(base_dir, "output")
     output_file = os.path.join(output_dir, "results.csv")
     # Cria o diretório output se não existir
     if not os.path.exists(output_dir):
@@ -77,6 +69,18 @@ def run_analysis():
         plt.show()
     except Exception as e:
         messagebox.showerror("Erro", f"Ocorreu um problema: {str(e)}")
+
+def export_to_json():
+    base_dir = os.path.dirname(sys.executable) if getattr(sys, 'frozen', False) else os.path.dirname(__file__)
+    output_dir = os.path.join(base_dir, "output")
+    csv_path = os.path.join(output_dir, "results.csv")
+    if os.path.exists("output/results.csv"):
+        df = pd.read_csv("output/results.csv")
+        json_path = os.path.join("output", "results.json")
+        df.to_json(json_path, orient='records')
+        messagebox.showinfo("Sucesso", f"Resultados exportados para {json_path}")
+    else:
+        messagebox.showerror("Erro", "Nenhum resultado CSV encontrado para exportar!")
 
 # Configuração da janela
 root = tk.Tk()
