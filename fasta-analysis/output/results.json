@@ -1,0 +1,1 @@
+[{"id":"seq1","description":"seq1 Homo_sapiens_example","length":28,"gc_percent":39.2857142857,"count_A":6,"count_C":5,"count_G":6,"count_T":5,"count_N":5,"ambiguous_bases":5},{"id":"seq2","description":"seq2 Unknown_organism","length":27,"gc_percent":0.0,"count_A":0,"count_C":0,"count_G":0,"count_T":0,"count_N":0,"ambiguous_bases":27}]
