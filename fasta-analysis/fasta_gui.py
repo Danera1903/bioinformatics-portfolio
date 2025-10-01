@@ -1,9 +1,15 @@
 import os
+import sys
 import tkinter as tk
 from tkinter import filedialog, messagebox
 from Bio import SeqIO
 import pandas as pd
 import matplotlib.pyplot as plt
+
+# Verifica se há suporte para GUI (necessário para executável)
+if sys.platform == "win32" and not hasattr(sys, "frozen"):
+    import ctypes
+    ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID("Fasta_Analysis_GUI")
 
 def select_file():
     file_path = filedialog.askopenfilename(filetypes=[("FASTA files", "*.fasta *.fas")])
@@ -25,7 +31,7 @@ def run_analysis():
     if not input_file:
         messagebox.showerror("Erro", "Selecione um arquivo FASTA!")
         return
-    output_dir = "output"
+    output_dir = os.path.join(os.path.dirname(__file__), "output")
     output_file = os.path.join(output_dir, "results.csv")
     # Cria o diretório output se não existir
     if not os.path.exists(output_dir):
