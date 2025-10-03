@@ -1,3 +1,3 @@
-id,description,length,gc_percent,count_A,count_C,count_G,count_T,count_N,ambiguous_bases
-seq1,seq1 Homo_sapiens_example,28,39.285714285714285,6,5,6,6,5,0
-seq2,seq2 Unknown_organism,27,55.55555555555556,6,7,8,6,0,0
+id;description;length;gc_percent;count_A;count_C;count_G;count_T;count_N;ambiguous_bases
+seq1;seq1 Homo_sapiens_example;28;39.29;6;5;6;6;5;0
+seq2;seq2 Unknown_organism;27;55.56;6;7;8;6;0;0
