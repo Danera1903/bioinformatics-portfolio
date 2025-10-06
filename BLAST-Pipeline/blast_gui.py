@@ -54,12 +54,16 @@ def run_blast_analysis():
         # Exibe resultados na GUI
         result_text.delete(1.0, tk.END)
         result_text.insert(tk.END, "Resultados do BLAST:\n\n")
-        for index, row in top_hits.iterrows():
-            result_text.insert(tk.END, f"Consulta: {row['qseqid']}\n")
-            result_text.insert(tk.END, f"Alvo: {row['sseqid']}\n")
-            result_text.insert(tk.END, f"% Identidade: {row['pident']:.2f}%\n")
-            result_text.insert(tk.END, f"Comprimento: {row['length']}\n")
-            result_text.insert(tk.END, f"E-value: {row['evalue']}\n\n")
+
+        if top_hits.empty:
+            result_text.insert(tk.END, "Nenhum alinhamento encontrado. Tente ajustar o e-value para um valor maior, usar sequências mais semelhantes ou verificar se as sequências são longas o suficiente.\n")
+        else:
+            for index, row in top_hits.iterrows():
+                result_text.insert(tk.END, f"Consulta: {row['qseqid']}\n")
+                result_text.insert(tk.END, f"Alvo: {['sseqid']}\n")
+                result_text.insert(tk.END, f"% Identidade: {row['pident']}\n")
+                result_text.insert(tk.END, f"Comprimento: {row['length']}\n")
+                result_text.insert(tk.END, f"E-value: {row['evalue']}\n\n")
 
         messagebox.showinfo("Sucesso", f"Análise BLAST concluída! Resultados salvos em {output_dir}")
 
@@ -118,4 +122,4 @@ try:
     root.mainloop()
 except Exception as e:
     print(f"Erro fatal: {str(e)}")
-    input("Pressione Enter para sair...")
+    input("Pressione Enter para sair...")  # Mantém o console aberto para ver erros

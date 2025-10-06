@@ -1,0 +1,2 @@
+qseqid;sseqid;pident;length;mismatch;gapopen;qstart;qend;sstart;send;evalue;bitscore
+query_seq;seq1;100.0;21;0;0;1;21;1;21;1.21e-10;42.1
